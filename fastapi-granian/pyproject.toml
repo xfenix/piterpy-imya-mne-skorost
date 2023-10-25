@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "fastapi-imya-mne-skorost"
+version = "1.0.0"
+description = "Piterpy 2023 sources"
+authors = ["Denis Anikin <ad@xfenix.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+redis = "*"
+granian = "*"
+
+[tool.pytest.ini_options]
+testpaths = "."
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
