@@ -10,7 +10,6 @@ export const options = {
 };
 
 export default function () {
-  //   http.get("http://37.230.112.113/test/simple/");
-  http.get("https://xfenix.ru");
-  sleep(1);
+  http.get("http://37.230.112.113/test/simple/");
+  sleep(0.2);
 }

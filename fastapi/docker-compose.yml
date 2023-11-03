@@ -29,6 +29,3 @@ services:
 
 networks:
   webnet:
-
-volumes:
-  test-postgres-data:
