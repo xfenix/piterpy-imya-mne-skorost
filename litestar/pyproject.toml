@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "litestar-imya-mne-skorost"
+version = "1.0.0"
+description = ""
+authors = ["Denis Anikin <ad@xfenix.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+litestar = {extras = ["standard"], version = "*"}
+redis = "*"
+gunicorn = "*"
+pydantic = "^2.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
