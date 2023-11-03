@@ -7,7 +7,7 @@ import datetime
 import logging
 import contextlib
 
-import pydantic
+import msgspec
 import litestar
 import redis.asyncio as async_redis
 
@@ -18,9 +18,9 @@ class DashboardTypes(enum.Enum):
     COMPLEX_DASHBOARD = 3
 
 
-class VeryImportantDomainModelInput(pydantic.BaseModel):
-    user_name: typing.Annotated[str, pydantic.Field(min_length=1, max_length=100)]
-    sound_volume: typing.Annotated[int, pydantic.Field(gt=0, example=10)]
+class VeryImportantDomainModelInput(msgspec.Struct):
+    user_name: typing.Annotated[str, msgspec.Meta(min_length=1, max_length=100)]
+    sound_volume: typing.Annotated[int, msgspec.Meta(gt=0)]
     score: int
     type_of_dashboard: DashboardTypes
     when: datetime.datetime
@@ -71,7 +71,7 @@ async def test_complex_api_with_db(
     data: VeryImportantDomainModelInput,
 ) -> dict[str, bool]:
     result = await MAIN_APP.state.async_redis_client.set(
-        f"my-key-{_create_random_string(10, 30)}", data.json()
+        f"my-key-{_create_random_string(10, 30)}", msgspec.json.encode(data)
     )
     MAIN_LOGGER.info(
         "We stored model %s  in redis with following feedback: %s",
