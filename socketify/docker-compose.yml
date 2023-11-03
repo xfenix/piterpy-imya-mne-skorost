@@ -11,7 +11,7 @@ services:
 
   nginx:
     image: nginx:1.25.3-bookworm
-    container_name: litestar-nginx-proxy
+    container_name: socketify-nginx-proxy
     ports:
       - "80:80"
     networks:
