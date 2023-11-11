@@ -10,7 +10,6 @@ python = "^3.12"
 litestar = {extras = ["standard"], version = "*"}
 redis = "*"
 gunicorn = "*"
-pydantic = "*"
 
 [build-system]
 requires = ["poetry-core"]
