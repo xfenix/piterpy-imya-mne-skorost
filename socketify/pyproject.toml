@@ -3,8 +3,6 @@ name = "socketify-imya-mne-skorost"
 version = "1.0.0"
 description = ""
 authors = ["Denis Anikin <ad@xfenix.ru>"]
-readme = "README.md"
-packages = [{include = "socketify_imya_mne_skorost"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
