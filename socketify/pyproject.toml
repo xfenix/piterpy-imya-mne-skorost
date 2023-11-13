@@ -7,8 +7,8 @@ authors = ["Denis Anikin <ad@xfenix.ru>"]
 [tool.poetry.dependencies]
 python = "^3.11"
 socketify = "*"
-msgspec = "^0.18.4"
-redis = "^5.0.1"
+msgspec = "*"
+redis = "*"
 
 [build-system]
 requires = ["poetry-core"]
