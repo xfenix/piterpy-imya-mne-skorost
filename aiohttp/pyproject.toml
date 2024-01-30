@@ -10,7 +10,7 @@ python = "^3.12"
 pydantic = "*"
 gunicorn = "*"
 redis = "*"
-aiohttp = "3.9.0b1"  # https://github.com/aio-libs/aiohttp/issues/7739
+aiohttp = "3.9.2"  # https://github.com/aio-libs/aiohttp/issues/7739
 
 [build-system]
 requires = ["poetry-core"]
